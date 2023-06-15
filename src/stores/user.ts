@@ -319,6 +319,7 @@ export const use_user_store = defineStore('user', () => {
 
   async function me(): Promise<void> {
     const user_auth_cookie = cookies.get('token')
+    const chat_store = use_chat_store()
     if (!user_auth_cookie) {
       console.error('No user auth cookie')
       return
@@ -339,6 +340,7 @@ export const use_user_store = defineStore('user', () => {
     } catch (error) {
       console.error(error)
     }
+    chat_store.get_all_messages()
     is_loading.value = false
   }
 

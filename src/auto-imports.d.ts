@@ -36,6 +36,7 @@ declare global {
   const defineAsyncComponent: typeof import('vue')['defineAsyncComponent']
   const defineComponent: typeof import('vue')['defineComponent']
   const display: typeof import('./stores/display')['display']
+  const display_only_modal: typeof import('./stores/display')['display_only_modal']
   const eagerComputed: typeof import('@vueuse/core')['eagerComputed']
   const effectScope: typeof import('vue')['effectScope']
   const extendRef: typeof import('@vueuse/core')['extendRef']
@@ -106,6 +107,7 @@ declare global {
   const toReactive: typeof import('@vueuse/core')['toReactive']
   const toRef: typeof import('vue')['toRef']
   const toRefs: typeof import('vue')['toRefs']
+  const toggle_hover_profile: typeof import('./stores/display')['toggle_hover_profile']
   const triggerRef: typeof import('vue')['triggerRef']
   const tryOnBeforeMount: typeof import('@vueuse/core')['tryOnBeforeMount']
   const tryOnBeforeUnmount: typeof import('@vueuse/core')['tryOnBeforeUnmount']
@@ -278,6 +280,7 @@ declare global {
   const useWindowFocus: typeof import('@vueuse/core')['useWindowFocus']
   const useWindowScroll: typeof import('@vueuse/core')['useWindowScroll']
   const useWindowSize: typeof import('@vueuse/core')['useWindowSize']
+  const use_chat_store: typeof import('./stores/chat')['use_chat_store']
   const use_club_store: typeof import('./stores/clubs')['use_club_store']
   const use_event_store: typeof import('./stores/event')['use_event_store']
   const use_map_store: typeof import('./stores/map')['use_map_store']
@@ -342,6 +345,7 @@ declare module 'vue' {
     readonly defineAsyncComponent: UnwrapRef<typeof import('vue')['defineAsyncComponent']>
     readonly defineComponent: UnwrapRef<typeof import('vue')['defineComponent']>
     readonly display: UnwrapRef<typeof import('./stores/display')['display']>
+    readonly display_only_modal: UnwrapRef<typeof import('./stores/display')['display_only_modal']>
     readonly eagerComputed: UnwrapRef<typeof import('@vueuse/core')['eagerComputed']>
     readonly effectScope: UnwrapRef<typeof import('vue')['effectScope']>
     readonly extendRef: UnwrapRef<typeof import('@vueuse/core')['extendRef']>
@@ -412,6 +416,7 @@ declare module 'vue' {
     readonly toReactive: UnwrapRef<typeof import('@vueuse/core')['toReactive']>
     readonly toRef: UnwrapRef<typeof import('vue')['toRef']>
     readonly toRefs: UnwrapRef<typeof import('vue')['toRefs']>
+    readonly toggle_hover_profile: UnwrapRef<typeof import('./stores/display')['toggle_hover_profile']>
     readonly triggerRef: UnwrapRef<typeof import('vue')['triggerRef']>
     readonly tryOnBeforeMount: UnwrapRef<typeof import('@vueuse/core')['tryOnBeforeMount']>
     readonly tryOnBeforeUnmount: UnwrapRef<typeof import('@vueuse/core')['tryOnBeforeUnmount']>
@@ -584,6 +589,7 @@ declare module 'vue' {
     readonly useWindowFocus: UnwrapRef<typeof import('@vueuse/core')['useWindowFocus']>
     readonly useWindowScroll: UnwrapRef<typeof import('@vueuse/core')['useWindowScroll']>
     readonly useWindowSize: UnwrapRef<typeof import('@vueuse/core')['useWindowSize']>
+    readonly use_chat_store: UnwrapRef<typeof import('./stores/chat')['use_chat_store']>
     readonly use_club_store: UnwrapRef<typeof import('./stores/clubs')['use_club_store']>
     readonly use_event_store: UnwrapRef<typeof import('./stores/event')['use_event_store']>
     readonly use_map_store: UnwrapRef<typeof import('./stores/map')['use_map_store']>

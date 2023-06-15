@@ -47,11 +47,16 @@
           <AvatarStack :attendees="session.user_id" />
         </div>
         <div v-else-if="session.user_id?.length">
-          <div v-for="user in session.user_id" :key="user.id || 'fallback-key'" class="flex items-center gap-3 rounded-xl p-1.5" :class="user_store.id === user.id ? 'bg-cafe-300' : '' ">
+          <div
+            v-for="user in session.user_id" :key="user.id || 'fallback-key'"
+            class="flex cursor-pointer items-center gap-3 rounded-xl p-1.5"
+            :class="user_store.id === user.id ? 'bg-cafe-300' : '' "
+            @click="toggle_hover_profile(user)"
+          >
             <img :src="user.pic_xsmall ? user.pic_xsmall : default_user_pic" class="aspect-square h-15 rounded-full object-cover">
             <div>
               <div class="text-lg font-bold">
-                {{ user.first_name }}
+                {{ user.incognito ? 'Personne incognito' : user.first_name }}
               </div>
               <div>{{ user.job_title }}</div>
             </div>

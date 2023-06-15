@@ -23,15 +23,15 @@
     >
       <button i-fa6-solid-compass class="sidebar-button" />
     </div>
-    <span class="name">Découvrir</span>
+    <span class="name">Découvrir</span> -->
     <div
       class="sidebar-group-button"
-      :class="[display.filter_modal ? 'activated' : 'desactivated']"
-      @click="display.filter_modal = !display.filter_modal"
+      :class="[display.chat_drawer ? 'activated' : 'desactivated']"
+      @click="display.chat_drawer = !display.chat_drawer"
     >
       <button i-fa6-solid-comment class="sidebar-button" />
     </div>
-    <span class="name">Chats</span> -->
+    <span class="name">Chats</span>
   </div>
 </template>
 

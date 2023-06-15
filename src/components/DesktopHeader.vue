@@ -1,5 +1,5 @@
 <template>
-  <header class="sticky top-0 z-50 h-50px w-full flex flex-row place-items-center justify-between bg-cafe-600">
+  <header class="top-0 z-50 h-50px w-full flex flex-row place-items-center justify-between bg-cafe-600">
     <RouterLink class="icon-btn" to="/">
       <img :src="logo" alt="logo" class="h-12 pl-4">
     </RouterLink>
@@ -19,6 +19,7 @@ import { use_user_store } from '@/stores/user'
 import default_user_pic from '@/assets/img/default_user_pic.png'
 
 const user = use_user_store()
+
 function display_modal(modal_name: string) {
   switch (modal_name) {
     case 'profile':

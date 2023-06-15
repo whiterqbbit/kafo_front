@@ -162,6 +162,7 @@ interface User {
 	highlighted_pins?: Array<number>
 	highlighted_users?: Array<number>
 	id?: number | null
+	user_id?: number | null
 	incognito?: boolean | null
 	is_inboarded?: boolean | null
 	job_title?: string
@@ -196,4 +197,23 @@ export interface Attendance {
 	attendees: User[]
 	place_id: number
 	events: Session[]
+}
+
+export interface Message {
+	id: number
+	message: string
+	user_id: number
+	created_at?: Date
+	user_id?: number
+	coffee_id?: number
+	club_id?: number
+	club_uuid?: string
+	receiver_id?: number
+	user?: User
+	receiver?: User
+}
+
+export interface Conversation {
+	contact: User
+	messages: (Message )[]
 }
